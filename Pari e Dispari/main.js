@@ -17,40 +17,54 @@ function evenOdd(num) {
 }
 
 
+//selettore bottone
+const playButton = document.querySelector("button");
+
+playButton.addEventListener("click",
+    function () {
+        //utente sceglie se pari o dispari e comunico in pagina
+        const userEvenOdd = document.getElementById("input-user-evenodd").value;
+        document.getElementById("user-output-evenodd").innerText = userEvenOdd;
+
+        //utente sceglie un numero da 1 a 5 e comunico in pagina
+        const userNumber = parseInt(document.getElementById("input-user-number").value);
+        document.getElementById("user-output-number").innerText = userNumber;
 
 
-//utente sceglie se pari o dispari e numero
-const userEvenOdd = prompt("Scegli pari o dispari");
-console.log("user sceglie: ", userEvenOdd);
+        // condizione per far scegliere l'opposto di userEvenOdd al PC e numero pc
+        let pcEvenOdd = "";
+        if (userEvenOdd === "pari") {
+            pcEvenOdd = "dispari";
+        } else {
+            pcEvenOdd ="pari"
+        }
+        //comunico risultato della condizioni in pagina
+        document.getElementById("pc-output-evenodd").innerText = pcEvenOdd;
 
-const userNumber = parseInt(prompt("Scegli un numero da 1 a 5"));
-console.log("numero user:", userNumber);
+
+        //pc sceglie numero random da 1 a 5 e comunico in pagina
+        const pcNumber = randomNumber(1, 5)
+        document.getElementById("pc-output-number").innerText = pcNumber;
 
 
-// // condizione per far scegliere l'opposto di userEvenOdd al PC e numero pc
-// let pcEvenOdd = "";
-// if (userEvenOdd === "pari") {
-//     pcEvenOdd = "dispari";
-// } else {
-//     pcEvenOdd ="pari"
-// }
-// console.log("il pc sceglie: ", pcEvenOdd);
+        //creo somma di userNumber e pcNumber e comunico in pagina
+        const userAdditionPc = userNumber + pcNumber;
+        document.getElementById("symbol").innerText = userAdditionPc;
 
-const pcNumber = randomNumber(1, 5)
-console.log("numero pc:", pcNumber);
 
-//creo somma di userNumber e pcNumber e verifico se è pari o dispari
-const userAdditionPc = userNumber + pcNumber;
-console.log("La somma dei numeri è: ", userAdditionPc);
+        //verifico se la somma di userNumber e pcNumber è pari o dispari
+        const resultEvenOdd = evenOdd(userAdditionPc);
 
-const resultEvenOdd = evenOdd(userAdditionPc);
-console.log(resultEvenOdd);
 
-//condizione di vincita
-if (userEvenOdd === "pari" & resultEvenOdd === "pari") {
-    console.log("VINCE USER");
-} else if (userEvenOdd === "dispari" & resultEvenOdd === "dispari") {
-    console.log("VINCE USER");
-} else {
-    console.log("VINCE PC");
-}
+        //selettore risultato in pagina
+        let resultOutput = document.getElementById("result-output");
+
+        //condizione di vincita
+        if (userEvenOdd === resultEvenOdd) {
+            resultOutput.innerText = "VINCE USER";
+        } else {
+            resultOutput.innerText = "VINCE PC";
+        }
+            }
+)
+
