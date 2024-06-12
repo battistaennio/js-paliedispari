@@ -14,3 +14,11 @@ function randomNumber(min, max) {
 function evenOdd(num) {
     return num % 2 === 0 ? "Pari" : "Dispari";
 }
+
+//utente sceglie se pari o dispari
+const userEvenOdd = prompt("Scegli pari o dispari");
+console.log(userEvenOdd);
+
+//utente sceglie numero
+const userNumber = parseInt(prompt("Scegli un numero da 1 a 5"));
+console.log(userNumber);
