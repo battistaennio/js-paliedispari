@@ -8,7 +8,63 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="txt-cntr">
+        <h1>PARI O DISPARI</h1>
+    </header>
+
+    <main class="txt-cntr">
+
+        <div id="container-box">
+
+            <div class="box">
+                <h2>Giocatore</h2>
+                <span id="user-output-number">...</span>
+                <h2 id="user-output-evenodd">Scegli Pari o Dispari</h2>
+            </div>
+
+            <div id="vs">
+                <h3 id="symbol">VS</h3>
+            </div>
+
+            <div class="box">
+                <h2>Computer</h2>
+                <span id="pc-output-number">...</span>
+                <h2 id="pc-output-evenodd">Il computer sceglierà l'opposto</h2>
+            </div>
+
+        </div>
+
+        <form action="#">
+
+            <div class="select-box">
+                <span>Scegli un numero da 1 a 5:</span>
+                <select id="input-user-number">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="select-box">
+                <span>Scegli dispari o pari:</span>
+                <select id="input-user-evenodd">
+                    <option value="dispari">Dispari</option>
+                    <option value="pari">Pari</option>
+                </select>
+            </div>
+            
+            <h3 id="result-output">&darr;</h3>
+
+            <button>GIOCA</button>
     
+        </form>
+
+
+
+    </main>
+
 
     <script type="text/javascript" src="main.js"></script>
 </body>

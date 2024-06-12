@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.txt-cntr{
+text-align: center;
+}
+
+header{
+    margin: 20px 0;
+}
+
+#container-box{
+    margin: 20px 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 50%;
+    min-height: 100px;
+}
+
+#vs{
+    width: 50px;
+}
+
+.box span{
+    font-size: 200px;
+}
+
+h3{
+    margin: 20px 0;
+    font-size: 40px;
+}
+
+button{
+    width: 120px;
+    height: 50px;
+    cursor: pointer;
+}
+
+form{
+    margin: 40px 0;
+}
+
+.select-box{
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+select{
+    padding: 5px;
+    text-align: center;
+}
