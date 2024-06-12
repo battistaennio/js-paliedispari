@@ -3,6 +3,7 @@
 //Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
 //Sommiamo i due numeri 
 //Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
+//Dichiariamo chi ha vinto.
 
 //funzione per generare un numero random
 function randomNumber(min, max) {
@@ -12,7 +13,7 @@ function randomNumber(min, max) {
 
 //funzione per stabilire pari o dispari
 function evenOdd(num) {
-    return num % 2 === 0 ? "Pari" : "Dispari";
+    return num % 2 === 0 ? "pari" : "dispari";
 }
 
 
@@ -26,14 +27,14 @@ const userNumber = parseInt(prompt("Scegli un numero da 1 a 5"));
 console.log("numero user:", userNumber);
 
 
-//condizione per far scegliere l'opposto di userEvenOdd al PC e numero pc
-let pcEvenOdd = "";
-if (userEvenOdd === "pari") {
-    pcEvenOdd = "dispari";
-} else if (userEvenOdd === "dispari") {
-    pcEvenOdd ="pari"
-}
-console.log("il pc sceglie: ", pcEvenOdd);
+// // condizione per far scegliere l'opposto di userEvenOdd al PC e numero pc
+// let pcEvenOdd = "";
+// if (userEvenOdd === "pari") {
+//     pcEvenOdd = "dispari";
+// } else {
+//     pcEvenOdd ="pari"
+// }
+// console.log("il pc sceglie: ", pcEvenOdd);
 
 const pcNumber = randomNumber(1, 5)
 console.log("numero pc:", pcNumber);
@@ -44,3 +45,12 @@ console.log("La somma dei numeri è: ", userAdditionPc);
 
 const resultEvenOdd = evenOdd(userAdditionPc);
 console.log(resultEvenOdd);
+
+//condizione di vincita
+if (userEvenOdd === "pari" & resultEvenOdd === "pari") {
+    console.log("VINCE USER");
+} else if (userEvenOdd === "dispari" & resultEvenOdd === "dispari") {
+    console.log("VINCE USER");
+} else {
+    console.log("VINCE PC");
+}
