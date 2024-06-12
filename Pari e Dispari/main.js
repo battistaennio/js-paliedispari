@@ -17,8 +17,18 @@ function evenOdd(num) {
 
 //utente sceglie se pari o dispari
 const userEvenOdd = prompt("Scegli pari o dispari");
-console.log(userEvenOdd);
+console.log("user sceglie: ", userEvenOdd);
 
-//utente sceglie numero
-const userNumber = parseInt(prompt("Scegli un numero da 1 a 5"));
-console.log(userNumber);
+// //utente sceglie numero
+// const userNumber = parseInt(prompt("Scegli un numero da 1 a 5"));
+// console.log(userNumber);
+
+//condizione per far scegliere l'opposto di userEvenOdd
+let pcEvenOdd = "";
+if (userEvenOdd === "pari") {
+    pcEvenOdd = "dispari";
+} else if (userEvenOdd === "dispari") {
+    pcEvenOdd ="pari"
+}
+
+console.log("il pc sceglie: ", pcEvenOdd);
